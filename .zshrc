@@ -26,4 +26,6 @@ alias kctx="kubectx"
 alias kns="kubens"
 alias audio="qjackctl"
 alias push-tomorrow="reminder; echo 'git push' | at 00:01 tomorrow"
+alias python="python3"
+alias pip="pip3"
 
