@@ -25,6 +25,10 @@ reminder() {
 alias kctx="kubectx"
 alias kns="kubens"
 alias audio="qjackctl"
+
+
+# TODO Push does not change the hour of the commit so it must create a function to commit 
+# and push on the next day
 alias push-tomorrow="reminder; echo 'git push' | at 00:01 tomorrow"
 alias python="python3"
 alias pip="pip3"
