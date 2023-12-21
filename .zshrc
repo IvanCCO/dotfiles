@@ -1,6 +1,13 @@
 plugins=(git zsh-autosuggestions alias-finder docker docker-compose docker-machine jsontools history kubectl emoji encode64 copyfile)
 
 
+# Tenho que fazer um scriptzinho para ele commitar com a mensagem e se der erro
+# ele tentar dnv so que com minhas credenciais. Ou eu posso só criar uma 
+# credencial definitiva ai ele sempre vai dar o push no repositorio com 
+# a credencial
+
+
+
 # Funcao para fazer o commit e o push
 git_push_schedule() {
   mensagem="$1"
