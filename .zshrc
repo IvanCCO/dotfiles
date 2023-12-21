@@ -21,9 +21,9 @@ reminder() {
 }
 
 # Alias 
-
 alias kctx="kubectx"
 alias kns="kubens"
+alias k="kubectl"
 alias audio="qjackctl"
 
 
@@ -32,4 +32,6 @@ alias audio="qjackctl"
 alias push-tomorrow="reminder; echo 'git push' | at 00:01 tomorrow"
 alias python="python3"
 alias pip="pip3"
+alias v="nvim"
+alias vconfig="nvim ~/.config/nvim/init.lua"
 
