@@ -1,4 +1,10 @@
 " Anotações  ===============================
+"
+" Nas configurações do intellij tem que colocar para 
+" entrar no projeto com control n
+" E tambem configurar as teclas disputadas,
+" A principal é add selection on next occurence
+" Além disso tem que colocar o plugin do vscode para funcioanr certinho
 
 " Record mode =  q-w
 " paste record mode @w
