@@ -127,7 +127,7 @@ nmap <leader>pi :action ParameterInfo<CR>
 nmap <leader>e :action ShowErrorDescription<CR>
 nmap <leader>gr :action Generate<CR>
 nmap <leader>rr :action RenameElement<CR>
-nmap <leader>nc :action Kotlin.NewFile<CR>
+nmap <leader>nc :action NewElement<CR>
 nmap <leader>fm :action ReformatCode<CR>
 nmap <leader>ev :action EvaluateExpression<CR>
 nmap <leader>gd :action GotoImplementation<CR>
