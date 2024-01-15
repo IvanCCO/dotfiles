@@ -1,11 +1,4 @@
 " Anotações  ===============================
-"
-" Nas configurações do intellij tem que colocar para 
-" entrar no projeto com control n
-" E tambem configurar as teclas disputadas,
-" A principal é add selection on next occurence
-" Além disso tem que colocar o plugin do vscode para funcioanr certinho
-
 " Record mode =  q-w
 " paste record mode @w
 " Splita a tela verticalmente: <c-w> v
@@ -102,7 +95,6 @@ nmap 0 ^
 nmap Y y$
 nnoremap L $
 nnoremap H ^
-nnoremap <leader>d "_d
 
 " Fast saving
 nmap <leader>w :w!<cr>
@@ -119,8 +111,10 @@ nnoremap <leader>l :action RecentFiles<CR>
 
 " Move line up and down using control
 " TODO: See how to use command or option on mac
-nnorempap <A-j> : action MoveLineDown<CR> 
-nnorempap <A-j> : action MoveLineDown<CR> 
+nnorempap <M-j> :action MoveLineDown<CR>
+nnorempap <M-k> :action MoveLineDown<CR>
+
+
 
 nmap \b :action ToggleLineBreakPoint<CR>
 nmap \d :action Debug<CR>
@@ -133,21 +127,19 @@ nmap <leader>pi :action ParameterInfo<CR>
 nmap <leader>e :action ShowErrorDescription<CR>
 nmap <leader>gr :action Generate<CR>
 nmap <leader>rr :action RenameElement<CR>
-"nmap <leader>nc :action Kotlin.NewFile<CR>
-nmap <leader>nc :action NewClass<CR>
+nmap <leader>nc :action Kotlin.NewFile<CR>
 nmap <leader>fm :action ReformatCode<CR>
 nmap <leader>ev :action EvaluateExpression<CR>
+nmap <leader>gd :action GotoImplementation<CR>
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
 """"""""""""""""""""""""""""""
 vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
-xnoremap <leader>d "_d
-xnoremap <leader>p "_dP
+vnoremap x _x
 
 " Move selected up and down
-xnorempap <A-j> : action MoveLineDown<CR> 
-xnorempap <A-j> : action MoveLineDown<CR> 
+xnorempap <A-j> : action MoveLineDown<CR>
 
 """"""""""""""""""""""""""""""
 " =>  Actions comands - Visual mode
@@ -301,4 +293,4 @@ let @" = l:saved_reg
 
 endfunction
 
-" The end
+" The end
