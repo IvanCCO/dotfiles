@@ -35,6 +35,7 @@ alias kctx="kubectx"
 alias kns="kubens"
 alias k="kubectl"
 alias audio="qjackctl"
+alias jpt="jupyter lab --app-dir /home/linuxbrew/.linuxbrew/share/jupyter/lab"
 
 
 # TODO Push does not change the hour of the commit so it must create a function to commit 
