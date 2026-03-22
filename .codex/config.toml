@@ -1,0 +1,20 @@
+model = "gpt-5.4"
+model_reasoning_effort = "xhigh"
+personality = "pragmatic"
+
+[windows]
+sandbox = "elevated"
+
+[features]
+multi_agent = true
+
+[mcp_servers.playwright]
+command = "npx"
+args = ["@playwright/mcp@latest"]
+
+[mcp_servers.chrome-devtools]
+command = "npx"
+args = ["chrome-devtools-mcp@latest"]
+
+[projects.'D:\Brio']
+trust_level = "trusted"

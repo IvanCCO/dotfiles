@@ -1,0 +1,127 @@
+{
+  "version": 3,
+  "skills": {
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "c2f31172b6f256272305a5e6e7228b258446899f",
+      "installedAt": "2026-02-02T13:59:19.460Z",
+      "updatedAt": "2026-02-02T13:59:19.460Z"
+    },
+    "logging-best-practices": {
+      "source": "boristane/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/boristane/agent-skills.git",
+      "skillPath": "skills/logging-best-practices/SKILL.md",
+      "skillFolderHash": "075c83b8bf75e6f7b7ac97b8cf752f819da7cdb7",
+      "installedAt": "2026-02-02T14:02:41.823Z",
+      "updatedAt": "2026-02-02T14:02:41.823Z"
+    },
+    "vercel-composition-patterns": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/composition-patterns/SKILL.md",
+      "skillFolderHash": "bf90d0a4b83ea054653350f9c67f6de235d3a368",
+      "installedAt": "2026-02-03T03:38:12.126Z",
+      "updatedAt": "2026-02-03T03:38:12.126Z"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "skillFolderHash": "928950704df8a8b885c03de5da626331e6f29cf8",
+      "installedAt": "2026-02-03T03:38:44.608Z",
+      "updatedAt": "2026-02-03T03:38:44.608Z"
+    },
+    "react-doctor": {
+      "source": "millionco/react-doctor",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/millionco/react-doctor.git",
+      "skillPath": "skills/react-doctor/SKILL.md",
+      "skillFolderHash": "868e96eab2f8e2be1e6069530d34a40a5a8ccbdc",
+      "installedAt": "2026-02-19T00:43:18.647Z",
+      "updatedAt": "2026-02-19T00:43:18.647Z"
+    },
+    "seo-geo": {
+      "source": "resciencelab/opc-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/resciencelab/opc-skills.git",
+      "skillPath": "skills/seo-geo/SKILL.md",
+      "skillFolderHash": "f1c065d096dbddb30b19a2cd51ca200a9b5b3d98",
+      "installedAt": "2026-03-01T14:47:14.154Z",
+      "updatedAt": "2026-03-01T14:47:14.154Z"
+    },
+    "tanstack-start-best-practices": {
+      "source": "deckardger/tanstack-agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/deckardger/tanstack-agent-skills.git",
+      "skillPath": "skills/tanstack-start/SKILL.md",
+      "skillFolderHash": "d4e415c2c618da237bbab97be0406e0c92efb18f",
+      "installedAt": "2026-03-14T15:03:54.008Z",
+      "updatedAt": "2026-03-14T15:03:54.008Z"
+    },
+    "storybook-story-writing": {
+      "source": "thebushidocollective/han",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/thebushidocollective/han.git",
+      "skillPath": "plugins/tools/storybook/skills/storybook-story-writing/SKILL.md",
+      "skillFolderHash": "1e8ba921f37b5dde7d68b1b395459d3b634df378",
+      "installedAt": "2026-03-16T03:04:50.133Z",
+      "updatedAt": "2026-03-16T03:04:50.133Z"
+    },
+    "nextjs15-performance": {
+      "source": "srbhr/resume-matcher",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/srbhr/resume-matcher.git",
+      "skillPath": ".claude/skills/nextjs-performance/SKILL.md",
+      "skillFolderHash": "7fb1b0e0391a86330835194c1e82a12c08e2b572",
+      "installedAt": "2026-03-17T00:17:35.276Z",
+      "updatedAt": "2026-03-17T00:17:35.276Z"
+    },
+    "react-performance-optimization": {
+      "source": "nickcrew/claude-ctx-plugin",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/nickcrew/claude-ctx-plugin.git",
+      "skillPath": "skills/react-performance-optimization/SKILL.md",
+      "skillFolderHash": "967ecb3c108b629f39fd9329ab2a112042581e13",
+      "installedAt": "2026-03-17T00:17:57.651Z",
+      "updatedAt": "2026-03-17T00:17:57.651Z"
+    },
+    "chrome-devtools": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/chrome-devtools/SKILL.md",
+      "skillFolderHash": "1425ccd89c83988f6bdbc9e801f81e9f1faf86ea",
+      "installedAt": "2026-03-17T00:57:14.711Z",
+      "updatedAt": "2026-03-17T00:57:14.711Z"
+    },
+    "emil-design-eng": {
+      "source": "emilkowalski/skill",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/emilkowalski/skill.git",
+      "skillPath": "skills/emil-design-eng/SKILL.md",
+      "skillFolderHash": "42244c68fa853423b28f9c2ac53adf38bb45d60f",
+      "installedAt": "2026-03-17T13:11:14.856Z",
+      "updatedAt": "2026-03-17T13:11:14.856Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "cline",
+    "codex",
+    "cursor",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-cli",
+    "opencode",
+    "warp"
+  ]
+}

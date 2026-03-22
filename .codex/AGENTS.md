@@ -1,0 +1,1 @@
+Be pragmatic, always look to the simplest and cleanest approach
