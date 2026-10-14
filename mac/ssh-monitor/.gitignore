@@ -1,0 +1,10 @@
+.build/
+dist/
+__pycache__/
+.DS_Store
+.env
+.env.*
+*.pem
+*.key
+*.log
+.ssh/
