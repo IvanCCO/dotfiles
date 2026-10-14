@@ -8,7 +8,25 @@ struct RemoteProcess: Decodable, Identifiable {
     let cpu, memory: Double
     var id: Int { pid }
 }
-enum MemoryAlert { case normal, high, swap }
+enum MemoryAlert { case normal, warning, critical }
+
+struct MemoryAlertFilter {
+    private(set) var current: MemoryAlert = .normal
+    private var pending: MemoryAlert = .normal
+    private var pendingSince: TimeInterval = 0
+
+    mutating func update(_ alert: MemoryAlert, at time: TimeInterval) {
+        if alert == current {
+            pending = alert
+            pendingSince = time
+        } else if alert != pending {
+            pending = alert
+            pendingSince = time
+        } else if time - pendingSince >= 10 {
+            current = alert
+        }
+    }
+}
 
 struct Snapshot: Decodable {
     let hostname, user, system: String
@@ -17,8 +35,11 @@ struct Snapshot: Decodable {
     let memoryUsed, memoryTotal: Double
     let swapUsed, swapTotal, zramUsed, zramTotal: Double
     var memoryAlert: MemoryAlert {
-        if swapUsed > 0 { return .swap }
-        return memoryUsed > 12 ? .high : .normal
+        let ram = memoryTotal > 0 ? memoryUsed / memoryTotal : 0
+        let swap = swapTotal > 0 ? swapUsed / swapTotal : 0
+        if ram >= 0.9 || (ram >= 0.8 && swap >= 0.8) { return .critical }
+        if ram >= 0.7 || swap >= 0.7 { return .warning }
+        return .normal
     }
     let gpu: GPU?
     let processes: [RemoteProcess]
@@ -61,6 +82,8 @@ enum SSHHosts {
     @Published var status = "Desconectada"
     @Published var error = ""
     @Published var connected = false
+    @Published private(set) var memoryAlert: MemoryAlert = .normal
+    private var alertFilter = MemoryAlertFilter()
     private var process: Process?
     private var generation = UUID()
     private var lastUpdate = Date.distantPast
@@ -86,6 +109,8 @@ enum SSHHosts {
         process = nil
         connected = false
         snapshot = nil
+        alertFilter = MemoryAlertFilter()
+        memoryAlert = .normal
         status = "Desconectada"
     }
 
@@ -123,6 +148,8 @@ enum SSHHosts {
                     guard let snapshot = try? JSONDecoder().decode(Snapshot.self, from: line) else { continue }
                     Task { @MainActor [weak self] in
                         guard let self, self.generation == token else { return }
+                        self.alertFilter.update(snapshot.memoryAlert, at: ProcessInfo.processInfo.systemUptime)
+                        self.memoryAlert = self.alertFilter.current
                         self.snapshot = snapshot; self.connected = true; self.status = "Conectada"; self.lastUpdate = Date()
                     }
                 }
@@ -131,7 +158,7 @@ enum SSHHosts {
             task.waitUntilExit()
             Task { @MainActor [weak self] in
                 guard let self, self.generation == token else { return }
-                self.connected = false; self.snapshot = nil; self.status = "Desconectada"
+                self.disconnect()
                 self.error = message.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ? "Conexão encerrada. Clique em reconectar." : message.trimmingCharacters(in: .whitespacesAndNewlines)
                 self.process = nil
             }

@@ -32,7 +32,7 @@ A conexão real deve ser verificada no Mac com acesso à rede da máquina remota
 
 O script aplica um overlay local caso as Command Line Tools contenham duas definições de SwiftBridging. Nenhum arquivo de sistema é alterado.
 
-A barra SWAP mostra apenas swap em disco (NVMe); zram é exibida separadamente. O ícone usa a cor padrão do sistema normalmente, amarelo quando a RAM usada ultrapassa 12 GiB e vermelho quando há swap em disco ocupado, com prioridade sobre amarelo. Páginas em swap podem continuar ocupadas após a pressão de memória diminuir; o vermelho indica ocupação, não comprova falta de RAM naquele instante.
+A barra SWAP mostra apenas swap em disco (NVMe); zram é exibida separadamente. O ícone usa a cor padrão quando RAM e swap estão abaixo de 70%; amarelo a partir de 70% em qualquer uma; vermelho a partir de 90% de RAM ou quando RAM e swap atingem ambas 80%. Uma condição precisa permanecer por 10 segundos para alterar a cor, inclusive ao voltar ao normal. Sem swap configurada, seu uso é considerado zero. Zram não entra nesse alerta. RAM usada é total menos disponível; swap ocupada isoladamente não comprova pressão de memória atual.
 
 ## Aparência e privacidade
 

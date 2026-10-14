@@ -13,12 +13,12 @@ import AppKit
 
     private var statusIcon: NSImage {
         let image = NSImage(systemSymbolName: "desktopcomputer", accessibilityDescription: "SSH Monitor")!
-        switch monitor.snapshot?.memoryAlert ?? .normal {
+        switch monitor.memoryAlert {
         case .normal:
             image.isTemplate = true
             return image
-        case .high, .swap:
-            let color: NSColor = monitor.snapshot?.memoryAlert == .swap ? .systemRed : .systemYellow
+        case .warning, .critical:
+            let color: NSColor = monitor.memoryAlert == .critical ? .systemRed : .systemYellow
             let colored = image.withSymbolConfiguration(NSImage.SymbolConfiguration(paletteColors: [color])) ?? image
             colored.isTemplate = false
             return colored
